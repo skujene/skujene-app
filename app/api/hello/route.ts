@@ -1,9 +1,7 @@
 import type { NextRequest } from 'next/server'
 
-export const config = {
-  runtime: 'edge',
-}
+export const runtime = 'edge';
 
-export async function GET(request: NextRequest) {
+export default async function handler(request: NextRequest) {
   return new Response('Hello, Next.js!')
 }
